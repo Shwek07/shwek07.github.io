@@ -3,123 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work | Shakeel Ramdhiansing</title>
-  <meta name="description" content="Projects built by Shakeel Ramdhiansing: booking and reservation web applications, with the technologies used and links to the live sites.">
+  <title>Work · Shakeel Ramdhiansing</title>
+  <meta name="description" content="Projects built by Shakeel Ramdhiansing with the technologies used and links to the live sites.">
   <link rel="canonical" href="https://shwek07.github.io/work.html">
 
-  <!-- Tab logo: PNG at the size browsers ask for, SVG for anything modern, .ico for the rest. -->
-  <link rel="icon" href="/img/favicon.png" sizes="32x32" />
+  <link rel="icon" href="/img/favicon.png" sizes="32x32">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/img/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <!-- Link preview card: Open Graph for most apps, the twitter: pair for X. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shwek07.github.io/work.html">
   <meta property="og:site_name" content="Shakeel Ramdhiansing">
   <meta property="og:locale" content="en">
-  <meta property="og:title" content="Work | Shakeel Ramdhiansing">
-  <meta property="og:description" content="Projects built by Shakeel Ramdhiansing: booking and reservation web applications, with the technologies used and links to the live sites.">
+  <meta property="og:title" content="Work · Shakeel Ramdhiansing">
+  <meta property="og:description" content="Projects built by Shakeel Ramdhiansing with the technologies used and links to the live sites.">
   <meta property="og:image" content="https://shwek07.github.io/img/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Shakeel Ramdhiansing — software engineering student from Suriname">
+  <meta property="og:image:alt" content="Shakeel Ramdhiansing, software engineering student from Suriname">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Work | Shakeel Ramdhiansing">
-  <meta name="twitter:description" content="Projects built by Shakeel Ramdhiansing: booking and reservation web applications, with the technologies used and links to the live sites.">
+  <meta name="twitter:title" content="Work · Shakeel Ramdhiansing">
+  <meta name="twitter:description" content="Projects built by Shakeel Ramdhiansing with the technologies used and links to the live sites.">
   <meta name="twitter:image" content="https://shwek07.github.io/img/og-image.png">
-  <meta name="twitter:image:width" content="1200">
-  <meta name="twitter:image:height" content="630">
-  <meta name="twitter:image:alt" content="Shakeel Ramdhiansing — software engineering student from Suriname">
 
-  <!-- Colours the browser UI around the page on mobile. -->
-  <meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#e9ece6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1411" media="(prefers-color-scheme: dark)">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..700&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/work.css">
 
-  <!-- Runs before the first paint, so the theme never flashes. -->
+  <!-- Runs before the first paint: theme, and whether motion is armed. -->
   <script src="js/theme.js"></script>
-  <!-- Runs as soon as the HTML is parsed, before the other scripts. -->
   <script src="js/i18n.js" defer></script>
 </head>
-
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="atmos" aria-hidden="true"></div>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="site-header">
-    <div class="wrap site-header__inner">
-      <a class="brand" href="index.html">Shakeel Ramdhiansing<span aria-hidden="true">.</span></a>
-
+  <header class="hdr" data-header>
+    <div class="wrap hdr__in">
+      <a class="brand" href="index.html"><span class="brand__dot" aria-hidden="true"></span>Shakeel <span class="brand__rest">Ramdhiansing</span></a>
       <nav class="nav" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
         <ul class="nav__list">
-          <li><a class="nav__link" href="index.html" data-spy-link="home" data-i18n="nav.home">Home</a></li>
-          <li><a class="nav__link" href="about.html" data-spy-link="about" data-i18n="nav.about">About</a></li>
-          <li><a class="nav__link" href="work.html" aria-current="page" data-spy-link="work" data-i18n="nav.work">Work</a></li>
-          <li><a class="nav__link" href="contact.html" data-spy-link="contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-
-        <div class="nav__tools">
-          <div class="lang lang--header" role="group" aria-label="Language" data-i18n-aria-label="lang.aria">
-            <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
-            <span class="lang__sep" aria-hidden="true">/</span>
-            <button class="lang__btn" type="button" data-lang="nl" aria-pressed="false">NL</button>
-          </div>
-
-          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">
-            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a7 7 0 0 0 9.8 9.8Z" />
-            </svg>
-            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4.2" />
-              <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" />
-            </svg>
-          </button>
-
-          <button class="icon-btn nav__toggle" type="button" data-menu-open aria-expanded="false"
-                  aria-controls="menu" aria-label="Open menu" data-i18n-aria-label="nav.menu.open">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 8h16M4 16h16" />
-            </svg>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==================== FULLSCREEN MOBILE MENU ==================== -->
-  <div class="menu" id="menu" data-menu role="dialog" aria-modal="true"
-       aria-label="Menu" data-i18n-aria-label="nav.menu.aria" hidden>
-    <div class="menu__inner wrap">
-      <div class="menu__head">
-        <span class="menu__brand">Shakeel</span>
-        <button class="icon-btn" type="button" data-menu-close aria-label="Close menu" data-i18n-aria-label="nav.menu.close">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-            <path d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        </button>
-      </div>
-
-      <nav class="menu__nav" aria-label="Menu" data-i18n-aria-label="nav.menu.aria">
-        <ul class="menu__list">
-          <li><a class="menu__link" href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a class="menu__link" href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a class="menu__link" href="work.html" aria-current="page" data-i18n="nav.work">Work</a></li>
-          <li><a class="menu__link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            <li><a class="nav__link mono" href="index.html" data-spy-link="home"><span class="nav__num">01</span><span data-i18n="nav.home">Home</span></a></li>
+            <li><a class="nav__link mono" href="work.html" data-spy-link="work" aria-current="page"><span class="nav__num">02</span><span data-i18n="nav.work">Work</span></a></li>
+            <li><a class="nav__link mono" href="about.html" data-spy-link="about"><span class="nav__num">03</span><span data-i18n="nav.about">About</span></a></li>
+            <li><a class="nav__link mono" href="contact.html" data-spy-link="contact"><span class="nav__num">04</span><span data-i18n="nav.contact">Contact</span></a></li>
         </ul>
       </nav>
-
-      <div class="menu__foot">
-        <div class="lang" role="group" aria-label="Language" data-i18n-aria-label="lang.aria">
+      <div class="hdr__tools">
+        <p class="status mono"><span class="status__dot" aria-hidden="true"></span><span data-i18n="hero.available">Open to an internship</span></p>
+        <div class="lang lang--header" role="group" aria-label="Language" data-i18n-aria-label="lang.aria">
           <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
           <span class="lang__sep" aria-hidden="true">/</span>
           <button class="lang__btn" type="button" data-lang="nl" aria-pressed="false">NL</button>
         </div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" data-menu-open aria-expanded="false" aria-controls="menu" aria-label="Open menu" data-i18n-aria-label="nav.menu.open">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <ul class="menu__social">
+  <div class="menu" id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu" data-i18n-aria-label="nav.menu.aria" hidden>
+    <div class="menu__inner wrap">
+      <div class="menu__head">
+        <span class="brand"><span class="brand__dot" aria-hidden="true"></span>Shakeel</span>
+        <button class="icon-btn" type="button" data-menu-close aria-label="Close menu" data-i18n-aria-label="nav.menu.close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav aria-label="Menu" data-i18n-aria-label="nav.menu.aria">
+        <ul class="menu__list">
+          <li><a class="menu__link" href="index.html"><span class="mono">01</span><span data-i18n="nav.home">Home</span></a></li>
+          <li><a class="menu__link" href="work.html" aria-current="page"><span class="mono">02</span><span data-i18n="nav.work">Work</span></a></li>
+          <li><a class="menu__link" href="about.html"><span class="mono">03</span><span data-i18n="nav.about">About</span></a></li>
+          <li><a class="menu__link" href="contact.html"><span class="mono">04</span><span data-i18n="nav.contact">Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="menu__foot">
+        <div class="lang " role="group" aria-label="Language" data-i18n-aria-label="lang.aria">
+          <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button class="lang__btn" type="button" data-lang="nl" aria-pressed="false">NL</button>
+        </div>
+        <ul class="menu__social mono">
           <li><a class="link" href="https://github.com/Shwek07" target="_blank" rel="noopener">GitHub</a></li>
           <li><a class="link" href="mailto:shakeelramdhiansing@gmail.com" data-i18n="footer.email">Email</a></li>
           <li><a class="link" href="https://wa.me/5978685952" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -128,262 +105,94 @@
     </div>
   </div>
 
-  <main id="main">
-
-    <!-- ==================== PAGE HEADER ==================== -->
-    <div class="page-header wrap">
-      <p class="eyebrow page-header__eyebrow" data-i18n="work.eyebrow">Work</p>
-      <h1 data-i18n="work.title">Projects</h1>
-      <p class="lead" data-i18n="work.lead">
-        Four projects I built during my studies and in my own time. Most of them are booking or
-        reservation systems, because that is the kind of problem I keep coming back to. All of them are
-        live, so you can click through them yourself.
-      </p>
-    </div>
-
-    <!-- ==================== PROJECT LIST ==================== -->
-    <section class="section" aria-labelledby="work-title">
-      <div class="wrap stack">
-        <h2 class="section__label reveal" id="work-title" data-i18n="work.title">Projects</h2>
-
-        <!-- While the screenshots load, CSS shows the skeleton further down. -->
-        <div class="work-loader is-loading" data-work-loader>
-
-          <ol class="work-list">
-
-            <!-- AUTOBOT -->
-            <li class="project reveal">
-              <div class="project__body">
-                <h3 class="project__title">
-                  <a href="https://autobot-unasat.vercel.app/" target="_blank" rel="noopener">AutoBot</a>
-                </h3>
-                <p class="project__summary" data-i18n="proj.autobot.desc">
-                  A car parts platform where you first select your car and then only see the parts that
-                  actually fit it. There is a chatbot that helps you search, you can log in with your
-                  Google account, and you can reserve the parts you find instead of ordering straight
-                  away.
-                </p>
-                <ul class="tags">
-                  <li>Next.js</li>
-                  <li>React</li>
-                  <li>Google OAuth</li>
-                  <li>Vercel</li>
-                </ul>
-                <p class="project__links">
-                  <a class="link link--mono" href="https://autobot-unasat.vercel.app/" target="_blank" rel="noopener">
-                    <span data-i18n="proj.live">Live site</span> <span aria-hidden="true">&#8599;</span>
-                  </a>
-                  <!-- TODO Shakeel: if this project has a public repository, add it like this:
-                  <a class="link link--mono" href="https://github.com/Shwek07/REPO-NAME" target="_blank" rel="noopener">
-                    GitHub <span aria-hidden="true">&#8599;</span>
-                  </a>
-                  -->
-                </p>
-              </div>
-
-              <a class="project__media" href="https://autobot-unasat.vercel.app/" target="_blank"
-                 rel="noopener" tabindex="-1" aria-hidden="true">
-                <img src="img/projects/autobot.png" alt="" width="1600" height="774">
-              </a>
-            </li>
-
-            <!-- SRANAN KAPPER -->
-            <li class="project reveal">
-              <div class="project__body">
-                <h3 class="project__title">
-                  <a href="https://sranankapper.vercel.app/" target="_blank" rel="noopener">Sranan Kapper</a>
-                </h3>
-                <p class="project__summary" data-i18n="proj.sranankapper.desc">
-                  A booking platform for barbershops where customers can find the shops that are listed, browse
-                  the services they offer, pick a time and book an appointment without having to call first.
-                </p>
-                <ul class="tags">
-                  <li>Vercel</li>
-                  <!-- TODO Shakeel: replace this placeholder with the technologies you actually used. -->
-                  <li class="tag--todo" data-i18n="proj.todoStack">add tech stack</li>
-                </ul>
-                <p class="project__links">
-                  <a class="link link--mono" href="https://sranankapper.vercel.app/" target="_blank" rel="noopener">
-                    <span data-i18n="proj.live">Live site</span> <span aria-hidden="true">&#8599;</span>
-                  </a>
-                </p>
-              </div>
-
-              <a class="project__media" href="https://sranankapper.vercel.app/" target="_blank"
-                 rel="noopener" tabindex="-1" aria-hidden="true">
-                <img src="img/projects/sranangkapper.png" alt="" width="1600" height="762">
-              </a>
-            </li>
-
-            <!-- SHARPEDGE VISUALS -->
-            <li class="project reveal">
-              <div class="project__body">
-                <h3 class="project__title">
-                  <a href="https://597-sharpedge-visuals.vercel.app/" target="_blank" rel="noopener">SharpEdge Visuals</a>
-                </h3>
-                <p class="project__summary" data-i18n="proj.sharpedge.desc">
-                  A website for a photography business, with an overview of what is offered and a booking
-                  flow for a shoot. This one leaned the most on the design side: the layout and the
-                  photography had to carry it.
-                </p>
-                <ul class="tags">
-                  <li>Vercel</li>
-                  <!-- TODO Shakeel: replace this placeholder with the technologies you actually used. -->
-                  <li class="tag--todo" data-i18n="proj.todoStack">add tech stack</li>
-                </ul>
-                <p class="project__links">
-                  <a class="link link--mono" href="https://597-sharpedge-visuals.vercel.app/" target="_blank" rel="noopener">
-                    <span data-i18n="proj.live">Live site</span> <span aria-hidden="true">&#8599;</span>
-                  </a>
-                </p>
-              </div>
-
-              <a class="project__media" href="https://597-sharpedge-visuals.vercel.app/" target="_blank"
-                 rel="noopener" tabindex="-1" aria-hidden="true">
-                <img src="img/projects/sharpedge.png" alt="" width="1600" height="765">
-              </a>
-            </li>
-
-            <!-- BOOKFLOW SU -->
-            <li class="project reveal">
-              <div class="project__body">
-                <h3 class="project__title">
-                  <a href="https://bookflow-su.vercel.app/" target="_blank" rel="noopener">BookFlow SU</a>
-                </h3>
-                <p class="project__summary" data-i18n="proj.bookflow.desc">
-                  A landing page for a booking platform meant for salons, barbers and other service
-                  businesses. The idea was one place where a business can be found and booked, instead of
-                  every shop needing its own site.
-                </p>
-                <ul class="tags">
-                  <li>Vercel</li>
-                  <!-- TODO Shakeel: replace this placeholder with the technologies you actually used. -->
-                  <li class="tag--todo" data-i18n="proj.todoStack">add tech stack</li>
-                </ul>
-                <p class="project__links">
-                  <a class="link link--mono" href="https://bookflow-su.vercel.app/" target="_blank" rel="noopener">
-                    <span data-i18n="proj.live">Live site</span> <span aria-hidden="true">&#8599;</span>
-                  </a>
-                </p>
-              </div>
-
-              <a class="project__media" href="https://bookflow-su.vercel.app/" target="_blank"
-                 rel="noopener" tabindex="-1" aria-hidden="true">
-                <img src="img/projects/bookflow.png" alt="" width="1600" height="774">
-              </a>
-            </li>
-          </ol>
-
-          <!-- Skeleton: four rows, same layout as the projects above -->
-          <div class="skeleton-list" aria-hidden="true">
-            <div class="skeleton">
-              <div class="skeleton__body">
-                <div class="skeleton__bar skeleton__bar--title"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar skeleton__bar--short"></div>
-                <div class="skeleton__tags">
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                </div>
-              </div>
-              <div class="skeleton__media"></div>
-            </div>
-
-            <div class="skeleton">
-              <div class="skeleton__body">
-                <div class="skeleton__bar skeleton__bar--title"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar skeleton__bar--short"></div>
-                <div class="skeleton__tags">
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                </div>
-              </div>
-              <div class="skeleton__media"></div>
-            </div>
-
-            <div class="skeleton">
-              <div class="skeleton__body">
-                <div class="skeleton__bar skeleton__bar--title"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar skeleton__bar--short"></div>
-                <div class="skeleton__tags">
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                </div>
-              </div>
-              <div class="skeleton__media"></div>
-            </div>
-
-            <div class="skeleton">
-              <div class="skeleton__body">
-                <div class="skeleton__bar skeleton__bar--title"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar"></div>
-                <div class="skeleton__bar skeleton__bar--short"></div>
-                <div class="skeleton__tags">
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                  <div class="skeleton__bar skeleton__bar--tag"></div>
-                </div>
-              </div>
-              <div class="skeleton__media"></div>
-            </div>
-          </div>
-        </div>
+  <main id="main" tabindex="-1">
+    <header class="page-hero">
+      <div class="wrap grid page-hero__grid">
+        <p class="label mono"><span class="label__num">(01)</span><span data-i18n="work.eyebrow">Work</span></p>
+        <h1 class="page-hero__title" data-split data-i18n="work.title">Projects</h1>
+        <p class="lead" data-i18n="work.lead" data-reveal>Four projects I built during my studies and in my own time. All of them are live, so you can click through them yourself.</p>
       </div>
+    </header>
+
+    <section class="section" style="padding-top:0" aria-labelledby="index-title">
+      <div class="wrap">
+        <h2 class="sr-only" id="index-title" data-i18n="work.title">Projects</h2>
+        <ol class="index" data-index>
+          <li class="index__row" data-reveal data-preview="0">
+            <a class="index__link" href="https://autobot-unasat.vercel.app/" target="_blank" rel="noopener">
+              <span class="index__top"><span class="index__num mono">01</span><span class="index__name">AutoBot</span></span>
+              <span class="index__kind" data-i18n="proj.autobot.kind">Car parts, matched to your car.</span>
+              <span class="index__desc" data-i18n="proj.autobot.desc">A car parts platform where you first select your car and then only see the parts that actually fit it. There is a chatbot that helps you search, you can log in with your Google account and you can reserve the parts you find instead of ordering straight away.</span>
+              <span class="index__meta mono"><span class="index__tags">Next.js / React / Google OAuth / Vercel</span><span class="index__go"><span data-i18n="proj.live">Live site</span> <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></span></span>
+              <span class="index__thumb"><img src="img/projects/autobot-900.webp" alt="" width="900" height="435" loading="lazy" decoding="async"></span>
+            </a>
+          </li>
+          <li class="index__row" data-reveal data-preview="1">
+            <a class="index__link" href="https://sranankapper.vercel.app/" target="_blank" rel="noopener">
+              <span class="index__top"><span class="index__num mono">02</span><span class="index__name">Sranan Kapper</span></span>
+              <span class="index__kind" data-i18n="proj.sranankapper.kind">Book a barber without calling first.</span>
+              <span class="index__desc" data-i18n="proj.sranankapper.desc">A booking platform for barbershops where customers can find the shops that are listed, browse the services they offer, pick a time and book an appointment without having to call first.</span>
+              <span class="index__meta mono"><span class="index__tags">Vercel</span><span class="index__go"><span data-i18n="proj.live">Live site</span> <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></span></span>
+              <span class="index__thumb"><img src="img/projects/sranangkapper-900.webp" alt="" width="900" height="429" loading="lazy" decoding="async"></span>
+            </a>
+            <!-- TODO Shakeel: add the technologies you actually used to this list. -->
+          </li>
+          <li class="index__row" data-reveal data-preview="2">
+            <a class="index__link" href="https://597-sharpedge-visuals.vercel.app/" target="_blank" rel="noopener">
+              <span class="index__top"><span class="index__num mono">03</span><span class="index__name">SharpEdge Visuals</span></span>
+              <span class="index__kind" data-i18n="proj.sharpedge.kind">A photography studio, carried by design.</span>
+              <span class="index__desc" data-i18n="proj.sharpedge.desc">A website for a photography business, with an overview of what is offered and a booking flow for a shoot. This one leaned the most on the design side: the layout and the photography had to carry it.</span>
+              <span class="index__meta mono"><span class="index__tags">Vercel</span><span class="index__go"><span data-i18n="proj.live">Live site</span> <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></span></span>
+              <span class="index__thumb"><img src="img/projects/sharpedge-900.webp" alt="" width="900" height="430" loading="lazy" decoding="async"></span>
+            </a>
+            <!-- TODO Shakeel: add the technologies you actually used to this list. -->
+          </li>
+          <li class="index__row" data-reveal data-preview="3">
+            <a class="index__link" href="https://bookinsteps.vercel.app/" target="_blank" rel="noopener">
+              <span class="index__top"><span class="index__num mono">04</span><span class="index__name">BookInSteps</span></span>
+              <span class="index__kind" data-i18n="proj.bookinsteps.kind">A booking in four steps, not five phone calls.</span>
+              <span class="index__desc" data-i18n="proj.bookinsteps.desc">A booking system for barbers, salons and other service businesses. Customers book online at any time of day: they choose a service, a date and a time, add their details and they are booked. The business manages all of its appointments in one place.</span>
+              <span class="index__meta mono"><span class="index__tags">Vercel</span><span class="index__go"><span data-i18n="proj.live">Live site</span> <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></span></span>
+              <span class="index__thumb"><img src="img/projects/bookinsteps-900.webp" alt="" width="900" height="438" loading="lazy" decoding="async"></span>
+            </a>
+            <!-- TODO Shakeel: add the technologies you actually used to this list. -->
+          </li>
+        </ol>
+      </div>
+      <div class="preview" aria-hidden="true" data-preview-box><img src="img/projects/autobot-900.webp" alt="" width="900" height="435" loading="lazy"><img src="img/projects/sranangkapper-900.webp" alt="" width="900" height="429" loading="lazy"><img src="img/projects/sharpedge-900.webp" alt="" width="900" height="430" loading="lazy"><img src="img/projects/bookinsteps-900.webp" alt="" width="900" height="438" loading="lazy"></div>
     </section>
 
-    <!-- ==================== CLOSING ==================== -->
-    <section class="section">
-      <div class="wrap stack">
-        <h2 class="section__label reveal" data-i18n="work.next.title">Next</h2>
-
-        <div class="prose reveal">
-          <p data-i18n-html="work.next.text">
-            I keep adding to this page as I finish new things. If you want to know what I am working on at
-            the moment, the <a class="link link--accent" href="index.html">home page</a> has a short
-            overview, or you can just
-            <a class="link link--accent" href="contact.html">get in touch</a>.
-          </p>
+    <section class="section" style="padding-top:0" aria-labelledby="next-title">
+      <div class="wrap grid next">
+        <h2 class="label mono" id="next-title"><span class="label__num">(02)</span><span data-i18n="work.next.title">Next</span></h2>
+        <div class="prose" data-reveal>
+          <p data-i18n-html="work.next.text">I keep adding to this page as I finish new things. If you want to know what I am working on at the moment, the <a class="link link--accent" href="index.html">home page</a> has a short overview, or you can just <a class="link link--accent" href="contact.html">get in touch</a>.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer">
-    <div class="wrap site-footer__inner">
-      <div class="site-footer__brand">
-        <p class="site-footer__name">Shakeel Ramdhiansing<span aria-hidden="true">.</span></p>
-        <p class="site-footer__meta">
-          &copy; <span data-year>2026</span>
-          <span aria-hidden="true">&middot;</span>
-          <span data-i18n="footer.updated">Last updated August 2026</span>
-        </p>
-      </div>
-
-      <div class="site-footer__end">
-        <ul class="site-footer__links">
-          <li><a class="link" href="mailto:shakeelramdhiansing@gmail.com" data-i18n="footer.email">Email</a></li>
-          <li><a class="link" href="https://github.com/Shwek07" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a class="link" href="https://wa.me/5978685952" target="_blank" rel="noopener">WhatsApp</a></li>
-        </ul>
-
-        <a class="icon-btn site-footer__top" href="#main" aria-label="Back to top"
-           data-i18n-aria-label="footer.backToTop">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 19V5M6 11l6-6 6 6" />
-          </svg>
-        </a>
-      </div>
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <p class="foot__meta mono">
+        <span>&copy; <span data-year>2026</span> Shakeel Ramdhiansing</span>
+        <span data-i18n="footer.updated">Last updated May 2026</span>
+      </p>
+      <ul class="foot__links mono">
+        <li><a class="link" href="mailto:shakeelramdhiansing@gmail.com" data-i18n="footer.email">Email</a></li>
+        <li><a class="link" href="https://github.com/Shwek07" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="link" href="https://wa.me/5978685952" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <a class="icon-btn" href="#main" aria-label="Back to top" data-i18n-aria-label="footer.backToTop">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script src="js/work.js" defer></script>
+  <script src="js/motion.js" defer></script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 
    1. Theme toggle
    2. Fullscreen mobile menu
-   3. Fade-in on scroll (IntersectionObserver)
+   3. Header behaviour + pausing loops on hidden tabs
    4. Scroll-spy for the navigation
    5. The year in the footer
    ========================================================================== */
@@ -63,7 +63,7 @@
     if (!panel || !openButton || !closeButton) return;
 
     /* Keep this the same as the transition in css/main.css. */
-    var CLOSE_DURATION = 220;
+    var CLOSE_DURATION = 600;
     var closeTimer = null;
     var lastFocused = null;
 
@@ -142,7 +142,7 @@
     });
 
     /* The menu is for small screens only, so close it if the window grows. */
-    window.matchMedia('(min-width: 48rem)').addEventListener('change', function (event) {
+    window.matchMedia('(min-width: 56rem)').addEventListener('change', function (event) {
       if (event.matches) close(false);
     });
 
@@ -151,47 +151,39 @@
     openButton.setAttribute('aria-expanded', 'false');
   }
 
-  /* 3. Fade-in on scroll --------------------------------------------------- */
-  function setUpScrollReveal() {
-    var items = document.querySelectorAll('.reveal');
-    if (!items.length) return;
+  /* 3. Header: solid after the hero edge, hides on the way down -------- */
+  function setUpHeader() {
+    var header = document.querySelector('[data-header]');
+    if (!header) return;
+    var lastY = window.scrollY;
+    var queued = false;
 
-    function showAll() {
-      items.forEach(function (item) {
-        item.classList.add('is-visible');
-      });
+    function update() {
+      queued = false;
+      var y = window.scrollY;
+      header.classList.toggle('is-solid', y > 24);
+      /* Only hide after real downward travel, and never near the top. */
+      if (Math.abs(y - lastY) > 6) {
+        header.classList.toggle('is-hidden', y > lastY && y > window.innerHeight * 0.6);
+        lastY = y;
+      }
     }
 
-    /* Nothing to animate for visitors who asked for reduced motion, and a
-       plain fallback for browsers without IntersectionObserver. */
-    if (reducedMotion() || !('IntersectionObserver' in window)) {
-      showAll();
-      return;
-    }
+    window.addEventListener('scroll', function () {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(update);
+    }, { passive: true });
 
-    /* Reveals everything that has reached the fold. Sweeping the whole list
-       on every callback also covers sections the visitor scrolled straight
-       past, which a plain isIntersecting check misses when someone jumps
-       down the page with the End key or a restored scroll position. */
-    function revealWhatIsInView() {
-      items.forEach(function (item) {
-        if (item.classList.contains('is-visible')) return;
-        if (item.getBoundingClientRect().top > window.innerHeight * 0.9) return;
+    /* Keyboard users tabbing into the header always get it back. */
+    header.addEventListener('focusin', function () { header.classList.remove('is-hidden'); });
+    update();
+  }
 
-        item.classList.add('is-visible');
-        observer.unobserve(item);
-      });
-    }
-
-    var observer = new IntersectionObserver(revealWhatIsInView, {
-      /* Start the animation just before the element reaches the bottom edge,
-         so it is already finished by the time it is properly in view. */
-      rootMargin: '0px 0px -10% 0px',
-      threshold: 0
-    });
-
-    items.forEach(function (item) {
-      observer.observe(item);
+  /* Pause every looping animation while the tab is hidden. */
+  function setUpVisibilityPause() {
+    document.addEventListener('visibilitychange', function () {
+      document.body.classList.toggle('paused', document.hidden);
     });
   }
 
@@ -274,7 +266,8 @@
 
   setUpThemeToggle();
   setUpMenu();
-  setUpScrollReveal();
+  setUpHeader();
+  setUpVisibilityPause();
   setUpScrollSpy();
   setUpYear();
 })();

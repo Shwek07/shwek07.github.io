@@ -26,6 +26,17 @@
      hide content (scroll reveals, the skeleton) is behind this class. */
   root.classList.add('js');
 
+  /* Arm the entrance animations before first paint so content does not flash
+     and then hide. js/motion.js removes this class once it has taken over (or
+     straight away if GSAP failed to load). The timer is a last-resort safety
+     net: content is never left hidden. */
+  if (!motionQuery.matches) {
+    root.classList.add('motion-pending');
+    window.setTimeout(function () {
+      if (!root.classList.contains('motion-on')) root.classList.remove('motion-pending');
+    }, 3500);
+  }
+
   /* localStorage can throw in private mode, so every call is guarded. */
   function readSaved() {
     try {
