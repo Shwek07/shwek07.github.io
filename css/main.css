@@ -1252,3 +1252,21 @@ body.has-menu-open { overflow: hidden; }
 @media (max-width: 24rem) {
   .brand__rest { display: none; }
 }
+
+/* 21. Mobile polish ======================================================== */
+html { -webkit-tap-highlight-color: transparent; }
+body { min-height: 100dvh; }
+.menu { overscroll-behavior: contain; }
+@media (max-width: 55.99rem) {
+  /* Lighter atmosphere on phones: blend modes + a huge animated layer on a
+     fixed element are expensive on mobile GPUs and drain battery. */
+  .atmos::before { animation: none; width: 120vmax; height: 120vmax; left: 10%; top: -40%; }
+  .atmos::after { mix-blend-mode: normal; opacity: 0.18; }
+  .hdr { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  /* Long words / URLs never force horizontal scroll */
+  .display, .h2, .h3, .prose, .lead { overflow-wrap: break-word; hyphens: auto; }
+}
+/* iOS zooms into inputs under 16px */
+@media (pointer: coarse) {
+  input, textarea, select { font-size: max(16px, 1em); }
+}
